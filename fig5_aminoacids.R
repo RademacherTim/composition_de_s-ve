@@ -28,7 +28,7 @@ for (aa in c("glycine", "aspargine", "4-hydroxyproline", "glutamine",
     y_limits_insert <- c(0, 360)
     y_label <- "Glycine"
   } else if (aa == "aspargine") {
-    y_limits <- c(0, 1400)
+    y_limits <- c(0, 1300)
     y_limits_insert <- c(0, 60)
     y_label <- "Aspargine"
   } else if (aa == "4-hydroxyproline") {
@@ -36,84 +36,84 @@ for (aa in c("glycine", "aspargine", "4-hydroxyproline", "glutamine",
     y_limits_insert <- c(0, 200)
     y_label <- "4-Hydroxyproline"
   } else if (aa == "glutamine") { 
-    y_limits <- c(0, 9500)
-    y_limits_insert <- c(0, 400)
-    y_label <- ""
-  } else if (aa == "threonine") {
-    y_limits <- c(0, 6)
-    y_label <- ""
-  } else if (aa == "1-methyl-histidine") {
-    y_limits <- c(0, 600)
-    y_limits_insert <- c(0, 17)
-    y_label <- ""
-  } else if (aa == "prolyne-hydroxyprolyne") {
     y_limits <- c(0, 2000)
-    y_limits_insert <- c(0, 150)
-    y_label <- ""
+    y_limits_insert <- c(0, 400)
+    y_label <- "Glutamic acid"
+  } else if (aa == "threonine") {
+    y_limits <- c(0, 10000)
+    y_limits_insert <- c(0, 1000)
+    y_label <- "Threonine"
+  } else if (aa == "1-methyl-histidine") {
+    y_limits <- c(0, 85)
+    y_limits_insert <- c(0, 6)
+    y_label <- "1-methylhistidine"
+  } else if (aa == "prolyne-hydroxyprolyne") {
+    y_limits <- c(0, 100)
+    y_label <- "Proline-hydroxyproline"
   } else if (aa == "arginine") {
-    y_limits <- c(0, 900)
-    y_limits_insert <- c(0, 23)
-    y_label <- ""
+    y_limits <- c(0, 150)
+    y_limits_insert <- c(0, 60)
+    y_label <- "Arginine"
   } else if (aa == "citruline") {
-    y_limits <- c(0, 380)
-    y_limits_insert <- c(0, 11)
-    y_label <- ""
+    y_limits <- c(0, 230)
+    y_limits_insert <- c(0, 30)
+    y_label <- "Citrulline"
   } else if (aa == "serine") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
-    y_label <- ""
+    y_label <- "Serine"
   } else if (aa == "glycine-proline") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
-    y_label <- ""
+    y_label <- "Glycine-proline"
   } else if (aa == "3-methyl-histidine") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
-    y_label <- ""
+    y_label <- "3-methylhistidine"
   } else if (aa == "alanine") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
-    y_label <- ""
+    y_label <- "Alanine"
   } else if (aa == "4-aminobutyric acide") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
-    y_label <- ""
+    y_label <- "4-aminobutyric acid"
   } else if (aa == "methionine") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
-    y_label <- ""
+    y_label <- "Methionine"
   } else if (aa == "sarcosine") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
-    y_label <- ""
+    y_label <- "Sarcosine"
   } else if (aa == "proline") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
-    y_label <- ""
+    y_label <- "Proline"
   } else if (aa == "lysine") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
-    y_label <- "", 
+    y_label <- "Lysine"
   } else if (aa == "aspartic acide") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
-    y_label <- ""
+    y_label <- "aspartic acid"
   } else if (aa == "histidine") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
-    y_label <- ""
+    y_label <- "Histidine"
   } else if (aa == "thiaproline") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
-    y_label <- ""
+    y_label <- "Thioproline"
   } else if (aa == "valine") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
-    y_label <- ""
+    y_label <- "Valine"
   } else if (aa == "glutamic acide") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
-    y_label <- ""
+    y_label <- "Glutamic acid"
   } else if (aa == "g-hydroxylysine") {
     y_limits <- c(0, 1200)
     y_limits_insert <- c(0, 10)
@@ -240,8 +240,8 @@ for (aa in c("glycine", "aspargine", "4-hydroxyproline", "glutamine",
   
   # Create insert for oxalique acid ------
   #=============================================================================
-  if (aa %in% c("glycine", "", "", "", "", 
-                "", "", "", "tot_AA")){
+  if (aa %in% c("glycine", "aspargine", "4-hydroxyproline", "glutamine", 
+                "threonine", "arginine", "citruline", "", "", "", "", "", "", "tot_AA")){
     # plot oxalique for early- and late-season sap from sugar and red maple --------------
     #png(filename = paste0("../fig/fig5_insert_",aa,"_",png_width,"x",png_height,".png"), 
     #    width = png_width, height = png_height, pointsize = png_pointsize)
